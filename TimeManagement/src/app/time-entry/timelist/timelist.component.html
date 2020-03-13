@@ -1,0 +1,42 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">TimeIn </th>
+      <th scope="col">TimeOut</th>
+      <th scope="col">Duration</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let time of times; ">
+
+      <td>{{ time.TimeIn }}</td>
+      <td>{{ time.TimeOut }}</td>
+      <td>{{ time.TimeDiffrence  }}</td>
+
+      <nav>
+        <button class="btn btn-danger" (click)="deleteTime(time._id)">
+          Delete
+        </button>
+      </nav>
+
+  </tbody>
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">InHours</th>
+      <th scope="col">OutHours </th>     
+      <th scope="col"> FirstIn</th>
+      <th scope="col"> LastIn</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>{{inTime}}</th>
+      <th>{{outTime}}</th>    
+      <th>{{FirstIn}}</th>
+      <th>{{LastIn}}</th>
+    </tr>
+  </tbody>
+</table>

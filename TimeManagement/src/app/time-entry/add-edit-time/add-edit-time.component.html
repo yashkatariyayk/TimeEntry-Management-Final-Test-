@@ -1,0 +1,34 @@
+<div class="container">
+  <div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color:rgb(223, 228, 200); ">
+          <h2 class="modal-title" id="myModalLabel">Add Time entry</h2>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="form" novalidate>
+
+
+            <div class="form-group">
+              <label class="col-md-4"><b>TimeIn</b></label>             
+              <input type="time" class="form-control" formControlName="TimeIn" #TimeIn [(ngModel)]="time.TimeIn"
+                atp-time-picker  />
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4"><b>TimeOut</b></label>             
+              <input type="time" class="form-control" formControlName="TimeOut" #TimeOut [(ngModel)]="time.TimeOut"
+                atp-time-picker  />
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" (click)="addTime(time)" routerLink="/time">
+                Add Time
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
